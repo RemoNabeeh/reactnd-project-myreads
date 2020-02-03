@@ -21,7 +21,7 @@ const SearchResponse = props => {
           <Book
             key={book.id}
             book={book}
-            shelf={book.shelf ? book.shelf : 'None'}
+            shelf={book.shelf ? book.shelf : 'none'}
             onMove={onMove}
           />
         ))}
