@@ -31,8 +31,8 @@ http://localhost:3000
 
 ## Screenshots
 
-![ScreenShot](https://github.com/RemoNabeeh/reactnd-project-myreads/tree/master/src/icons/MyReads-1.jpg)
-![ScreenShot](https://github.com/RemoNabeeh/reactnd-project-myreads/tree/master/src/icons/MyReads-2.jpg)
+![ScreenShot](https://github.com/RemoNabeeh/reactnd-project-myreads/blob/master/src/images/MyReads-1.jpg)
+![ScreenShot](https://github.com/RemoNabeeh/reactnd-project-myreads/blob/master/src/images/MyReads-2.jpg)
 
 ## License
 
