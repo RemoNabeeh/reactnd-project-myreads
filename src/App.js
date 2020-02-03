@@ -1,10 +1,11 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { debounce } from 'throttle-debounce';
 import * as BooksAPI from './BooksAPI';
 import './App.css';
 import BooksPage from './BooksPage';
 import SearchPage from './SearchPage';
+import NotFound from './NotFound.js';
 
 const bookshelves = [
   { key: 'currentlyReading', name: 'Currently Reading' },
@@ -72,29 +73,32 @@ class BooksApp extends React.Component {
     }
     return (
       <div className='app'>
-        <Route
-          exact
-          path='/'
-          render={() => (
-            <BooksPage
-              bookshelves={bookshelves}
-              books={books}
-              onMove={this.moveBook}
-            />
-          )}
-        ></Route>
-        <Route
-          path='/search'
-          render={() => (
-            <SearchPage
-              books={books}
-              onMove={this.moveBook}
-              searchBooks={searchBooks}
-              onSearch={this.searchForBooks}
-              onResetSearch={this.resetSearch}
-            />
-          )}
-        ></Route>
+        <Switch>
+          <Route
+            exact
+            path='/'
+            render={() => (
+              <BooksPage
+                bookshelves={bookshelves}
+                books={books}
+                onMove={this.moveBook}
+              />
+            )}
+          />
+          <Route
+            path='/search'
+            render={() => (
+              <SearchPage
+                books={books}
+                onMove={this.moveBook}
+                searchBooks={searchBooks}
+                onSearch={this.searchForBooks}
+                onResetSearch={this.resetSearch}
+              />
+            )}
+          />
+          <Route component={NotFound} />
+        </Switch>
       </div>
     );
   }
