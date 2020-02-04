@@ -36,7 +36,7 @@ class BooksApp extends React.Component {
       console.log(err);
       this.setState({ error: true });
     });
-    if (shelf === 'None') {
+    if (shelf === 'none') {
       this.setState(prevState => ({
         books: prevState.books.filter(b => b.id !== book.id)
       }));
